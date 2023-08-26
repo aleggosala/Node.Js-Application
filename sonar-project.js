@@ -1,13 +1,16 @@
-const fs = require('fs');
+const sonarqubeScanner = require('sonarqube-scanner');
 
-// Get the current sonar-project.js file contents
-let sonarProjectJsContents = fs.readFileSync('sonar-project.js', 'utf8');
-
-// Update the sonar-project.js file contents
-sonarProjectJsContents = sonarProjectJsContents.replace(
-  'sonar.projectKey',
-  'sqp_43f92dc275a95f621ed2c522062e700bdc3312bd'
-);
-
-// Write the updated sonar-project.js file contents
-fs.writeFileSync('sonar-project.js', sonarProjectJsContents, 'utf8');
+sonarqubeScanner({
+  serverUrl: 'http://54.73.236.30:9000/',
+  options: {
+    'sonar.projectDescription': 'Node.Js-Application',
+    'sonar.projectName': 'Node.Js-Application',
+    'sonar.projectKey': 'Node.Js-Application', // Updated project key
+    'sonar.login': 'sqp_43f92dc275a95f621ed2c522062e700bdc3312bd', // Your SonarQube token
+    'sonar.projectVersion': '1.0',
+    'sonar.language': 'js',
+    'sonar.sourceEncoding': 'UTF-8',
+    'sonar.sources': 'api,auth,lib,modules,test', // Comma-separated list of relevant directories
+    'sonar.branch.name': 'main', // Your project's main branch
+  },
+});
