@@ -1,15 +1,15 @@
 {
   "name": "realworl-starter-kit-hapijs",
   "version": "0.0.1",
-  "description": "Realworld Starter kit HapiJS implementation",
+  "description": "Realworl Starter kit HapiJS implementation",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/nodemon --ignore test/",
     "test": "./node_modules/.bin/standard && ./node_modules/.bin/lab",
-    "sonarqube": "node sonar-project.js" // Add this line for SonarQube analysis
+    "sonarqube": "node sonar-project.js"
   },
   "keywords": [
-    "realworld",
+    "realworl",
     "hapijs",
     "node",
     "javascript"
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guillaumemaka/realworld-starter-kit-hapijs"
+    "url": "git+https://github.com/guillaumemaka/realworld-starter-kit-hapijs.git"
   },
   "devDependencies": {
     "code": "^4.1.0",
